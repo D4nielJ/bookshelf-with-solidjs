@@ -6,11 +6,9 @@ interface BookListProps {
 }
 
 export function BookList(props: BookListProps) {
-  const totalBooks = props.books.length;
-
   return (
     <>
-      <h2>My books ({totalBooks})</h2>
+      <h2>My books ({props.books.length})</h2>
       <ul>
         <For each={props.books}>
           {(book) => (
